@@ -1,15 +1,20 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 
 @Component({
   selector: "app-bottone",
-  templateUrl: "./bottone.component.html",
+  template: `
+    <button (click)="handleClick($event)">premimi</button>
+  `,
   styleUrls: ["./bottone.component.scss"]
 })
 export class BottoneComponent implements OnInit {
-  public pippo: string = "rosso";
-  @Input() stringaPadre = "ciao";
+  @Output() onEvent = new EventEmitter<string>();
 
   constructor() {}
 
   ngOnInit() {}
+
+  handleClick() {
+    this.onEvent.emit("hello world");
+  }
 }
