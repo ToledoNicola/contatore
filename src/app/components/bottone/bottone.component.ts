@@ -3,7 +3,9 @@ import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 @Component({
   selector: "app-bottone",
   template: `
-    <button (click)="handleClick($event)">premimi</button>
+    <button (click)="handleClick()">
+      <ng-content></ng-content>
+    </button>
   `,
   styleUrls: ["./bottone.component.scss"]
 })
@@ -15,6 +17,6 @@ export class BottoneComponent implements OnInit {
   ngOnInit() {}
 
   handleClick() {
-    this.onEvent.emit("hello world");
+    this.onEvent.emit();
   }
 }
