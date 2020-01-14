@@ -3,9 +3,18 @@ import { NgModule } from "@angular/core";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { ParagrafoComponent } from "./paragrafo/paragrafo.component";
-import { ContatoreComponent } from "./contatore/contatore.component";
-import { BottoneComponent, TitoloComponent } from "./components";
+
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+
+import {
+  BottoneComponent,
+  TitoloComponent,
+  ParagrafoComponent,
+  ContatoreComponent,
+  StarComponent,
+  RatingStarsComponent
+} from "./components";
+import { HomepageComponent } from "./containers";
 
 @NgModule({
   declarations: [
@@ -13,9 +22,12 @@ import { BottoneComponent, TitoloComponent } from "./components";
     BottoneComponent,
     TitoloComponent,
     ParagrafoComponent,
-    ContatoreComponent
+    ContatoreComponent,
+    HomepageComponent,
+    RatingStarsComponent,
+    StarComponent
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent]
 })
