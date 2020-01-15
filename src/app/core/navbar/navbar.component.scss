@@ -1,0 +1,17 @@
+nav {
+  display: flex;
+  justify-content: center;
+  ul {
+    display: flex;
+    list-style-type: none;
+    li {
+      cursor: pointer;
+      margin-left: 20px;
+      transition: 500ms all;
+    }
+  }
+}
+
+.active {
+  color: red;
+}

@@ -12,9 +12,11 @@ import {
   ParagrafoComponent,
   ContatoreComponent,
   StarComponent,
-  RatingStarsComponent
+  RatingStarsComponent,
+  ContatoreCardComponent
 } from "./components";
-import { HomepageComponent } from "./containers";
+import { HomepageComponent, ContatorePageComponent } from "./pages";
+import { NavbarComponent } from "./core";
 
 @NgModule({
   declarations: [
@@ -25,7 +27,10 @@ import { HomepageComponent } from "./containers";
     ContatoreComponent,
     HomepageComponent,
     RatingStarsComponent,
-    StarComponent
+    StarComponent,
+    NavbarComponent,
+    ContatorePageComponent,
+    ContatoreCardComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],
