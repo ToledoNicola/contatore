@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { HomepageComponent, ContatorePageComponent } from "./pages";
+import { HomepageComponent } from "./pages";
 
 const routes: Routes = [
   {
@@ -9,7 +9,8 @@ const routes: Routes = [
   },
   {
     path: "contatore",
-    component: ContatorePageComponent
+    loadChildren: () =>
+      import("./contatore/contatore.module").then(m => m.ContatoreModule)
   }
 ];
 
